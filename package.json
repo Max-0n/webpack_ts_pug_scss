@@ -1,0 +1,31 @@
+{
+  "name": "Webpack_starter",
+  "version": "1.0.0",
+  "description": "Setup PUG, SCSS",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Max-0n/webpack_pug_scss.git"
+  },
+  "engines": {
+    "node": "13.7.0"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --mode=development --open",
+    "build": "webpack --mode=production",
+    "build:dev": "webpack --mode=development"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.4.2",
+    "file-loader": "^5.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.1",
+    "pug": "^2.0.4",
+    "pug-loader": "^2.4.0",
+    "sass-loader": "^8.0.2",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  }
+}

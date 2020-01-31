@@ -1,0 +1,38 @@
+@import 'fonts';
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-family: Gilroy, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 100;
+  box-sizing: border-box;
+  height: 100vh;
+  margin: 0;
+  padding: 50px;
+}
+
+button {
+  cursor: pointer;
+  font-size: 40px;
+  font-weight: bold;
+  padding: 20px 30px;
+  margin: auto;
+  border-radius: 6px;
+  outline: none;
+  // background: url('./kick.png');
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+
+  figcaption {
+    padding: 10px 15px;
+    font-weight: 500;
+    font-style: italic;
+  }
+}
