@@ -5,7 +5,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const config = {
   entry: {
-    app: './src/app.js'
+    app: './src/app.ts'
   },
   output: {
     filename: "[name].[hash].bundle.js",
@@ -13,6 +13,9 @@ const config = {
   },
   devServer: {
     port: 3000,
+  },
+  resolve: {
+    extensions: [".ts", ".tsx", ".js"]
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -26,6 +29,10 @@ const config = {
   ],
   module: {
     rules: [
+      {
+        test: /\.tsx?$/,
+        loader: "ts-loader"
+      },
       {
         test: /\.pug$/,
         use: [
