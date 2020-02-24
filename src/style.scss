@@ -1,9 +1,7 @@
-@import 'fonts';
-
 body {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   font-family: Gilroy, Helvetica, sans-serif;
   font-size: 14px;
@@ -14,25 +12,17 @@ body {
   padding: 50px;
 }
 
-button {
-  cursor: pointer;
-  font-size: 40px;
-  font-weight: bold;
-  padding: 20px 30px;
-  margin: auto;
-  border-radius: 6px;
-  outline: none;
-  // background: url('./kick.png');
+.wrapper {
+  display: flex;
 }
 
 figure {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
+  margin: 10px;
+  text-align: center;
 
   figcaption {
-    padding: 10px 15px;
-    font-weight: 500;
+    padding: 7px 5px;
     font-style: italic;
+    color: #999;
   }
 }

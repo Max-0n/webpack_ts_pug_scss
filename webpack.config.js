@@ -41,7 +41,7 @@ const config = {
       },
       {
         //IMAGE LOADER
-        test: /\.(jpe?g|png|gif|svg)$/i,
+        test: /\.(jpe?g|png|gif|svg|mp3)$/i,
         loader: 'file-loader',
         options: {
           name: '[name].[contenthash].[ext]'
