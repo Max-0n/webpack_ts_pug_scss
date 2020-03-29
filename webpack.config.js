@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const SassLintPlugin = require('sass-lint-webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const PugLintPlugin = require('puglint-webpack-plugin');
 
 const config = {
   entry: {
@@ -32,6 +33,11 @@ const config = {
     }),
     new CleanWebpackPlugin(),
     new SassLintPlugin(),
+    new PugLintPlugin({
+      context: 'src',
+      files: '**/*.pug',
+      config: Object.assign({ emitError: true }, require('./.pug-lintrc'))
+    })
   ],
   module: {
     rules: [
@@ -49,10 +55,8 @@ const config = {
         ]
       },
       {
-        test: /\.(pug|jade)$/,
-        use: [
-          'pug-loader?pretty=true',
-        ]
+        test: /\.pug$/,
+        loader: 'pug-loader?pretty=true'
       },
       {
         //IMAGE LOADER
