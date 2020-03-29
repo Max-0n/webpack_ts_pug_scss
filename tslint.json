@@ -27,7 +27,7 @@
       "prefer-const": true,
       "arrow-return-shorthand": true,
       "binary-expression-operand-order": true,
-      "comment-format": [true, "check-space", "check-uppercase", "allow-trailing-lowercase"],
+      "comment-format": [true, "check-space", "allow-trailing-lowercase"],
       "comment-type": [true, "singleline"],
       "encoding": true,
       "increment-decrement": [true, "allow-post"],

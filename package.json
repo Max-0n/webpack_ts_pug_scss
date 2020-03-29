@@ -11,7 +11,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server --mode=development",
-    "test": "tslint 'src/**/*.ts'",
+    "test": "tslint 'src/**/*.ts'; sass-lint 'src/**/*.scss' -v -q",
     "lint-fix": "tslint 'src/**/*.ts' --fix",
     "build": "webpack --mode=production",
     "build:dev": "webpack --mode=development"
@@ -25,6 +25,8 @@
     "node-sass": "^4.13.1",
     "pug": "^2.0.4",
     "pug-loader": "^2.4.0",
+    "sass-lint": "^1.13.1",
+    "sass-lint-webpack": "^1.0.2",
     "sass-loader": "^8.0.2",
     "ts-loader": "^6.2.2",
     "tslint": "^6.1.0",
