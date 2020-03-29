@@ -13,6 +13,10 @@ const config = {
   },
   devServer: {
     port: 3000,
+    overlay: {
+      warnings: false,
+      errors: true
+    }
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js"]
@@ -31,7 +35,16 @@ const config = {
     rules: [
       {
         test: /\.tsx?$/,
-        loader: "ts-loader"
+        use: [
+          "ts-loader",
+          {
+            loader: "tslint-loader",
+            options: {
+              emitErrors: true,
+              fix: true,
+            }
+          }
+        ]
       },
       {
         test: /\.pug$/,
