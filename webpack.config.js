@@ -13,7 +13,7 @@ const config = {
     path: path.resolve(__dirname, 'dist')
   },
   devServer: {
-    port: 3000,
+    port: 8080,
     overlay: {
       warnings: false,
       errors: true
@@ -49,7 +49,7 @@ const config = {
         ]
       },
       {
-        test: /\.pug$/,
+        test: /\.(pug|jade)$/,
         use: [
           'pug-loader?pretty=true',
         ]
