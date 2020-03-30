@@ -38,7 +38,6 @@
       "one-variable-per-declaration": true,
       "prefer-method-signature": true,
       "prefer-while": true,
-      "space-before-function-paren": true,
       "space-within-parens": true,
       "switch-final-break": true,
       "unnecessary-else": true,
