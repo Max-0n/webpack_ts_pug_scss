@@ -15,10 +15,11 @@ const config = {
   },
   devServer: {
     port: 8080,
-    overlay: {
-      warnings: false,
-      errors: true
-    }
+    compress: true,
+    // overlay: {
+    //   warnings: false,
+    //   errors: true
+    // }
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js"]
@@ -56,7 +57,14 @@ const config = {
       },
       {
         test: /\.pug$/,
-        loader: 'pug-loader?pretty=true'
+        use: [
+          {
+            loader: 'pug-loader',
+            options: {
+              pretty: true
+            }
+          }
+        ]
       },
       {
         //IMAGE LOADER
